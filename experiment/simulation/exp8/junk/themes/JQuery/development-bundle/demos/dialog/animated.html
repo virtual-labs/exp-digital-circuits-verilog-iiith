@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+	<meta charset="utf-8"/>
+	<title>jQuery UI Dialog - Animation</title>
+	<link href="../../themes/base/jquery.ui.all.css" rel="stylesheet"/>
+	<script src="../../jquery-1.4.2.js"></script>
+	<script src="../../external/jquery.bgiframe-2.1.1.js"></script>
+	<script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.mouse.js"></script>
+	<script src="../../ui/jquery.ui.draggable.js"></script>
+	<script src="../../ui/jquery.ui.position.js"></script>
+	<script src="../../ui/jquery.ui.resizable.js"></script>
+	<script src="../../ui/jquery.ui.dialog.js"></script>
+	<script src="../../ui/jquery.effects.core.js"></script>
+	<script src="../../ui/jquery.effects.blind.js"></script>
+	<script src="../../ui/jquery.effects.explode.js"></script>
+	<link href="../demos.css" rel="stylesheet"/>
+	<script>
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "explode"
+		});
+
+		$( "#opener" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+	});
+	</script>
+</head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+
+<div class="demo">
+
+<div id="dialog" title="Basic dialog">
+	<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+
+<button id="opener">Open Dialog</button>
+
+</div><!-- End demo -->
+
+
+
+<div class="demo-description">
+<p>Dialogs may be animated by specifying an effect for the show and/or hide properties.  You must include the individual effects file for any effects you would like to use.</p>
+</div><!-- End demo-description -->
+
+
+
+</body></html>

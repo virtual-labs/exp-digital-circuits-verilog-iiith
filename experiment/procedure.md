@@ -1,1 +1,1 @@
-### Procedure
+<img src="images/Exp9_Procedure.png">
