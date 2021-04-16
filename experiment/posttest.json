@@ -1,7 +1,5 @@
 [
-{"question":"1. Which is correct assignment for two input and gate shown in Fig.1?
-<img src=images/exp9QuizFigures/image003.gif>
-",
+{"question":"1. Which is correct assignment for two input and gate shown in Fig.1? <img src='images/exp9QuizFigures/image003.gif'> ",
 "answers":{
             "a":"Wire Y; assign Y = A x B ;",
             "b":"Wire Y; assign Y = A & B ;",
@@ -9,9 +7,8 @@
             "d":"Wire Y; assign A & B = Y ;"
           },
 "correctAnswer":"b"},
-{"question":"2. Which is correct assignment for try state buffer shown in Fig.2?
-<img src=images/exp9QuizFigures/image005.gif>
-",
+
+{"question":"2. Which is correct assignment for try state buffer shown in Fig.2 <img src='images/exp9QuizFigures/image005.gif'> ",
 "answers":{
             "a":" Tri Y ; assign Y = (ENB) : A : Z ;",
             "b":"Y = (ENB) ? A : Z ;",
@@ -29,12 +26,7 @@
           },
 "correctAnswer":"a"},
 
-{"question":"4. Which is/are bitwise operator ?
-A) &
-B) ~
-C) |
-D) ~^
-",
+{"question":"4. Which is/are bitwise operator ? A) & B) ~ C) | D) ~^ ",
 "answers":{
             "a":"Only A.",
             "b":"A and B.",
@@ -43,12 +35,7 @@ D) ~^
           },
  "correctAnswer":"d"}
 
-{"question":"5. Which is not a correct statement?
-
-(A) >> is a shift right operator.
-(B) & is a reduction operator
-(C) === is a case equality operator
-(D) Y = (sel) ? A : B; is an example of conditional operator",
+{"question":"5. Which is not a correct statement? (A) >> is a shift right operator. (B) & is a reduction operator (C) === is a case equality operator (D) Y = (sel) ? A : B; is an example of conditional operator",
 "answers":{
             "a":"A",
             "b":"None",
@@ -57,9 +44,7 @@ D) ~^
           },
  "correctAnswer":"b"},
     
-{"question":"6. Which is/are correct verilog code for Fig.3?
-img src=../../exp9QuizFigures/Exp9-Q6.jpg>
-",
+{"question":"6. Which is/are correct verilog code for Fig.3? img src='../../exp9QuizFigures/Exp9-Q6.jpg'>",
 "answers":{
             "a":"Only A.",
             "b":"Only B.",
@@ -68,12 +53,7 @@ img src=../../exp9QuizFigures/Exp9-Q6.jpg>
           },
  "correctAnswer":"d"}
     
-{"question":"7. Which is correct verilog code for Fig.4?
-<img src=../../exp9QuizFigures/image009.gif>
-
-<img src=../../exp9QuizFigures/Exp9-Q7.jpg>
-
-",
+{"question":"7. Which is correct verilog code for Fig.4? <img src='../../exp9QuizFigures/image009.gif'> <img src='../../exp9QuizFigures/Exp9-Q7.jpg'> ",
 "answers":{
             "a":"Only A.",
             "b":"Only B.",
@@ -82,10 +62,7 @@ img src=../../exp9QuizFigures/Exp9-Q6.jpg>
           },
  "correctAnswer":"c"},
     
-{"question":"8. Which is not a correct port assignment for a module?
-
-<img src=../../exp9QuizFigures/Exp9-Q8.jpg>
-",
+{"question":"8. Which is not a correct port assignment for a module? <img src='../../exp9QuizFigures/Exp9-Q8.jpg'>",
 "answers":{
             "a":"(i)",
             "b":"(ii)",
@@ -94,13 +71,8 @@ img src=../../exp9QuizFigures/Exp9-Q6.jpg>
           },
  "correctAnswer":"d"}
 
-{"question":"9. Which is/are not correct escaped characters?
-(A) \n for new line
-(B) \t for new tab
-(C) %% for %
-(D) \ for \
-(E) \" for "
-(F) \s for string",
+{"question":"9. Which is/are not correct escaped characters? (A) \n for new line
+(B) \t for new tab (C) %% for % (D) \ for \ (E) \ for  (F) \s for string",
 "answers":{
             "a":"A and B.",
             "b":"C and D.",
@@ -109,20 +81,7 @@ img src=../../exp9QuizFigures/Exp9-Q6.jpg>
           },
 "correctAnswer":"d"},
 
-{"question":"10. Which is/are showing incorrect result for given operands and operator ?
-(i) 1 > 0 -> 1
-'b1 x 1 <= 0 -> x
-10 < z -> x
-
-(ii) 4'b 1z0x == 4'b 1z0x -> x
-4'b 1z0x != 4'b 1z0x -> x
-
-(iii) One multi-bit operand -> One single-bit result
-a = 4'b1001;
-c = |a; // c = 1|0|0|1 = 1
-
-(iv) 4'b 1z0x === 4'b 1z0x -> 1
-4'b 1z0x !== 4'b 1z0x -> 0",
+{"question":"10. Which is/are showing incorrect result for given operands and operator ? (i) 1 > 0 -> 1 'b1 x 1 <= 0 -> x 10 < z -> x (ii) 4'b 1z0x == 4'b 1z0x -> x 4'b 1z0x != 4'b 1z0x -> x (iii) One multi-bit operand -> One single-bit result a = 4'b1001; c = |a; // c = 1|0|0|1 = 1 (iv) 4'b 1z0x === 4'b 1z0x -> 1 4'b 1z0x !== 4'b 1z0x -> 0",
 "answers":{
             "a":"(i), (ii) and (iii).",
             "b":"Only (i).",
