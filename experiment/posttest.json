@@ -15,9 +15,9 @@
             "c":" Tri Y ; assign Y = (ENB) ? A : Z ;",
             "d":"Tri Y ; Y = (ENB) ? A : Z ;"
           },
- "correctAnswer":"d"}
+ "correctAnswer":"d"},
 
-{"question":"3. Which is not a logical operator ?",
+    {"question":"3. Which is not a logical operator?",
 "answers":{
             "a":"| logical OR",
             "b":"|| logical OR",
@@ -33,7 +33,7 @@
             "c":"A, B and C.",
             "d":"All Of These."
           },
- "correctAnswer":"d"}
+ "correctAnswer":"d"},
 
 {"question":"5. Which is not a correct statement? (A) >> is a shift right operator. (B) & is a reduction operator (C) === is a case equality operator (D) Y = (sel) ? A : B; is an example of conditional operator",
 "answers":{
@@ -51,7 +51,7 @@
             "c":"C and D.",
             "d":"A and B."
           },
- "correctAnswer":"d"}
+ "correctAnswer":"d"},
     
 {"question":"7. Which is correct verilog code for Fig.4? <img src='../../exp9QuizFigures/image009.gif'> <img src='../../exp9QuizFigures/Exp9-Q7.jpg'> ",
 "answers":{
@@ -69,7 +69,7 @@
             "c":"(iii)",
             "d":"(iv)"
           },
- "correctAnswer":"d"}
+ "correctAnswer":"d"},
 
 {"question":"9. Which is/are not correct escaped characters? (A) \n for new line
 (B) \t for new tab (C) %% for % (D) \ for \ (E) \ for  (F) \s for string",
@@ -89,6 +89,5 @@
             "d":"None"
           },
  "correctAnswer":"d"}
-    
-    
+
 ]
