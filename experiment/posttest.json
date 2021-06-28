@@ -71,8 +71,7 @@
           },
  "correctAnswer":"d"},
 
-{"question":"9. Which is/are not correct escaped characters? (A) \n for new line
-(B) \t for new tab (C) %% for % (D) \ for \ (E) \ for  (F) \s for string",
+{"question":"9. Which is/are not correct escaped characters? (A) \n for new line (B) \t for new tab (C) %% for % (D) \ for \ (E) \ for  (F) \s for string",
 "answers":{
             "a":"A and B.",
             "b":"C and D.",
