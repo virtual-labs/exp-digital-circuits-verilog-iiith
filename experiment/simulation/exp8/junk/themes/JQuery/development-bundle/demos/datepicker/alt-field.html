@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+	<meta charset="utf-8"/>
+	<title>jQuery UI Datepicker - Populate alternate field</title>
+	<link href="../../themes/base/jquery.ui.all.css" rel="stylesheet"/>
+	<script src="../../jquery-1.4.2.js"></script>
+	<script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.datepicker.js"></script>
+	<link href="../demos.css" rel="stylesheet"/>
+	<script>
+	$(function() {
+		$( "#datepicker" ).datepicker({
+			altField: "#alternate",
+			altFormat: "DD, d MM, yy"
+		});
+	});
+	</script>
+</head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+
+<div class="demo">
+
+<p>Date: <input id="datepicker" type="text"/> <input id="alternate" size="30" type="text"/></p>
+
+</div><!-- End demo -->
+
+
+
+<div class="demo-description">
+<p>Populate an alternate field with its own date format whenever a date is selected using the <code>altField</code> and <code>altFormat</code> options.  This feature could be used to present a human-friendly date for user selection, while passing a more computer-friendly date through for further processing.</p>
+</div><!-- End demo-description -->
+
+
+
+</body></html>
