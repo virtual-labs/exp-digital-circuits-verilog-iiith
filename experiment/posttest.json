@@ -1,5 +1,5 @@
 [
-{"question":"1. Which is correct assignment for two input and gate shown in Fig.1? <img src='images/exp9QuizFigures/image003.gif'>",
+{"question":"1. Which is correct assignment for two input and gate shown in Fig.1? <img src='images/image003.gif'> ",
 "answers":{
             "a":"Wire Y; assign Y = A x B ;",
             "b":"Wire Y; assign Y = A & B ;",
@@ -8,7 +8,7 @@
           },
 "correctAnswer":"b"},
 
-{"question":"2. Which is correct assignment for try state buffer shown in Fig.2 <img src='images/exp9QuizFigures/image005.gif'>",
+{"question":"2. Which is correct assignment for try state buffer shown in Fig.2 <img src='images/image005.gif'> ",
 "answers":{
             "a":" Tri Y ; assign Y = (ENB) : A : Z ;",
             "b":"Y = (ENB) ? A : Z ;",
@@ -44,7 +44,7 @@
           },
  "correctAnswer":"b"},
     
-{"question":"6. Which is/are correct verilog code for Fig.3? img src='../../exp9QuizFigures/Exp9-Q6.jpg'>",
+{"question":"6. Which is/are correct verilog code for Fig.3? img src='images/Exp9-Q6.jpg'>",
 "answers":{
             "a":"Only A.",
             "b":"Only B.",
@@ -53,7 +53,7 @@
           },
  "correctAnswer":"d"},
     
-{"question":"7. Which is correct verilog code for Fig.4? <img src='../../exp9QuizFigures/image009.gif'> <img src='../../exp9QuizFigures/Exp9-Q7.jpg'> ",
+{"question":"7. Which is correct verilog code for Fig.4? <img src='images/image009.gif'> <img src='images/Exp9-Q7.jpg'> ",
 "answers":{
             "a":"Only A.",
             "b":"Only B.",
@@ -62,7 +62,7 @@
           },
  "correctAnswer":"c"},
     
-{"question":"8. Which is not a correct port assignment for a module? <img src='../../exp9QuizFigures/Exp9-Q8.jpg'>",
+{"question":"8. Which is not a correct port assignment for a module? <img src='images/Exp9-Q8.jpg'>",
 "answers":{
             "a":"(i)",
             "b":"(ii)",
