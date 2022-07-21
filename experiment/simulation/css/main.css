@@ -53,3 +53,8 @@
     vertical-align: bottom;
     max-width: 300%;
 }
+.v-instruction-container {
+    border: .2rem solid #97d23d;
+    margin-top: 30px;
+    justify-content: flex-start;
+  }
