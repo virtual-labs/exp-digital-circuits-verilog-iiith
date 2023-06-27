@@ -1,4 +1,6 @@
-[
+{
+    "version": 2.0,
+    "questions": [
     {
         "question": "1.  Verilog is a subset of ___",
         "answers": {
@@ -7,7 +9,13 @@
             "c": "System Verilog",
             "d": "Both A and C"
         },
-        "correctAnswer": "c"
+        "correctAnswer": "c",
+        "explanations": {
+            "a":"",
+            "b":"",
+            "c":"",
+            "d":""},
+        "difficulty": "intermediate"
     },
     {
         "question": "2. Transistor level descriptions can be provided in Verilog",
@@ -15,7 +23,12 @@
             "a": "True",
             "b": "False"
         },
-        "correctAnswer": "a"
+        "correctAnswer": "a",
+        "explanations": {
+            "a":"",
+            "b":""
+        },
+        "difficulty": "beginner"
     },
     {
         "question": "3. #time is the operator used for providing delay in Verilog. How is it realized physically?",
@@ -25,7 +38,14 @@
             "c": "Flipflop",
             "d": "None of the above"
         },
-        "correctAnswer": "b"
+        "correctAnswer": "b",
+        "explanations": {
+            "a":"",
+            "b":"",
+            "c":"",
+            "d":""
+        },
+        "difficulty": "intermediate"
     },
     {
         "question": " 4. Verilog is a  ____",
@@ -35,7 +55,14 @@
             "c": "Both",
             "d": "None"
         },
-        "correctAnswer": "c"
+        "correctAnswer": "c",
+        "explanations": {
+            "a":"",
+            "b":"",
+            "c":"",
+            "d":""
+        },
+        "difficulty": "beginner"
     },
     {
         "question": "5. The highest and lowest level of abstraction provided in Verilog are ____",
@@ -45,7 +72,14 @@
             "c": "Behavioral and switch level",
             "d": "Dataflow and switch level"
         },
-        "correctAnswer": "c"
+        "correctAnswer": "c",
+        "explanations": {
+            "a":"",
+            "b":"",
+            "c":"",
+            "d":""
+        },
+        "difficulty": "advanced"
     },
     {
         "question": "6. Verilog supports ____",
@@ -55,6 +89,14 @@
             "c": "2 values and 4 strengths",
             "d": "2 values and 8 strengths"
         },
-        "correctAnswer": "a"
+        "correctAnswer": "a",
+        "explanations": {
+            "a":"",
+            "b":"",
+            "c":"",
+            "d":""
+        },
+        "difficulty": "advanced"
     }
 ]
+}
