@@ -1,8 +1,10 @@
 .v-datalist-container {
     min-height: 31.25rem;
-    height: 70vh;
     width: 100%;
     margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .toolbar-item-list {
@@ -54,7 +56,85 @@
     max-width: 300%;
 }
 .v-instruction-container {
-    border: .2rem solid #97d23d;
+    border: .2rem solid hsl(84, 62%, 53%);
     margin-top: 30px;
-    justify-content: flex-start;
+}
+
+.highlight {
+    border: 2px solid red;
+    /* transition: border-color 0.3s ease-in-out; */
+  }
+  
+  .highlight:focus {
+    outline: none;
+    border-color: orange;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: auto;
+    text-align: left;
+  }
+  
+  #containerTB {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: auto;
+    text-align: left;
+  }
+  
+  .comment {
+    color: green;
+    font-style: italic;
+  }
+  
+  ul.custom-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  ul.custom-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: lightgray;
+    cursor: move;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  li.drag-sort-active {
+    background: transparent;
+    color: transparent;
+    border: 1px greenyellow;
+  }
+  
+  span.drag-sort-active {
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: lightgray;
+    cursor: move;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .success-table{
+    font-size: 1rem;
+    color: rgb(31, 170, 31);
+    font-weight: bold;
+  }
+  
+  .failure-table{
+    font-size: 1rem;
+    color: rgb(228, 23, 23);
+    font-weight: bold;
+  }
+  
+  .bold-table{
+    font-weight: bold;
   }
