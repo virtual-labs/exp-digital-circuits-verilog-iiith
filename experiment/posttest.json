@@ -1,4 +1,6 @@
-[
+{
+  "version": 2.0,
+  "questions": [
 {"question":"1. Which is correct assignment for two input and gate shown in Fig.1? <img src='images/image003.gif'> ",
 "answers":{
             "a":"Wire Y; assign Y = A x B ;",
@@ -6,16 +8,30 @@
             "c":"Wire Y; assign Y = A and B ;",
             "d":"Wire Y; assign A & B = Y ;"
           },
-"correctAnswer":"b"},
+"correctAnswer":"b",
+"explanations": {
+    "a":"This option is incorrect because the symbol 'x' typically represents multiplication, ",
+    "b":"It represents the logical AND operation between inputs A and B",
+    "c":"This option is incorrect because it uses the word 'and' instead of the appropriate symbol '&' to represent the logical AND operation",
+    "d":"The correct syntax is to assign the result of the operation to the variable on the left-hand side of the equation"
+},
+"difficulty": "intermediate"},
 
-{"question":"2. Which is correct assignment for try state buffer shown in Fig.2 <img src='images/image005.gif'> ",
+{"question":"2. Which is correct assignment for tri state buffer shown in Fig.2 <img src='images/image005.gif'> ",
 "answers":{
             "a":" Tri Y ; assign Y = (ENB) : A : Z ;",
             "b":"Y = (ENB) ? A : Z ;",
             "c":" Tri Y ; assign Y = (ENB) ? A : Z ;",
             "d":"Tri Y ; Y = (ENB) ? A : Z ;"
           },
- "correctAnswer":"d"},
+ "correctAnswer":"d",
+ "explanations": {
+     "a":"",
+     "b":"Option b is incorrect because it is missing the 'Tri' keyword before the declaration of variable Y.",
+     "c":"",
+     "d":"Option d is correct because it properly combines the tristate declaration using the 'Tri' keyword, assigns the value to variable Y using the ternary operator '(ENB) ? A : Z', and does not include any unnecessary keywords or syntax errors."
+ },
+ "difficulty": "intermediate"},
 
     {"question":"3. Which is not a logical operator?",
 "answers":{
@@ -24,34 +40,59 @@
             "c":"&& logical AND",
             "d":"! logical NOT"
           },
-"correctAnswer":"a"},
+"correctAnswer":"a",
+"explanations": {
+    "a":"'|'' symbol represents the bitwise OR operator, not the logical OR operator",
+    "b":"The '||'' symbol represents the logical OR operator ",
+    "c":"The '&&' symbol represents the logical AND operator",
+    "d":"The '!' symbol represents the logical NOT operator"
+},
+"difficulty": "beginner"},
 
-{"question":"4. Which is/are bitwise operator ?  A) &  B) ~  C) |  D) ~^ ",
+{"question":"4. Which is/are bitwise operator(s) ?  A) &  B) ~  C) |  D) ^ ",
 "answers":{
             "a":"Only A.",
             "b":"A and B.",
             "c":"A, B and C.",
             "d":"All Of These."
           },
- "correctAnswer":"d"},
+ "correctAnswer":"d",
+ "explanations": {
+  "a":"This is a bitwise AND operator. It performs a bitwise AND operation on the corresponding bits of two operands",
+  "b":"A is bitwise AND, B is bitwise NOT.",
+  "c":"A is bitwise AND, B is bitwise NOT, C is bitwise OR",
+  "d":"A is bitwise AND, B is bitwise NOT, C is bitwise OR, D is bitwise XOR"},
+"difficulty": "beginner"},
 
 {"question":"5. Which is not a correct statement?  (A) >> is a shift right operator.  (B) & is a reduction operator  (C) === is a case equality operator  (D) Y = (sel) ? A : B; is an example of conditional operator",
 "answers":{
             "a":"A",
-            "b":"None",
+            "b":"B",
             "c":"All Of These.",
             "d":"A, B and C."
           },
- "correctAnswer":"b"},
+ "correctAnswer":"b",
+ "explanations": {
+  "a":">> is indeed a right shift operator",
+  "b":"'&'' is actually a bitwise AND operator, used to perform a bitwise AND operation on the binary representations of two numbers. It does not serve the purpose of a reduction operator.",
+  "c":"Atleast one among these is correct.",
+  "d":"A and C are correct."},
+"difficulty": "beginner"},
     
-{"question":"6. Which is/are correct verilog code for Fig.3? img src='images/Exp9-Q6.jpg'>",
+{"question":"6. Which is/are correct verilog code for Fig.3? <img src='images/Exp9-Q6.jpg'>",
 "answers":{
             "a":"Only A.",
             "b":"Only B.",
             "c":"C and D.",
             "d":"A and B."
           },
- "correctAnswer":"d"},
+ "correctAnswer":"d",
+ "explanations": {
+  "a":"",
+  "b":"",
+  "c":"",
+  "d":""},
+"difficulty": "advanced"},
     
 {"question":"7. Which is correct verilog code for Fig.4? <img src='images/image009.gif'> <img src='images/Exp9-Q7.jpg'> ",
 "answers":{
@@ -60,7 +101,13 @@
             "c":"Only C.",
             "d":"A and D."
           },
- "correctAnswer":"c"},
+ "correctAnswer":"c",
+ "explanations": {
+  "a":"",
+  "b":"",
+  "c":"",
+  "d":""},
+"difficulty": "advanced"},
     
 {"question":"8. Which is not a correct port assignment for a module? <img src='images/Exp9-Q8.jpg'>",
 "answers":{
@@ -69,16 +116,28 @@
             "c":"(iii)",
             "d":"(iv)"
           },
- "correctAnswer":"d"},
+ "correctAnswer":"d",
+ "explanations": {
+  "a":"",
+  "b":"",
+  "c":"",
+  "d":""},
+"difficulty": "intermediate"},
 
-{"question":"9. Which is/are not correct escaped characters? (A)\n for new line (B)\t for new tab (C) %% for % (D)\for\\ (E)\for  (F)\\s for string",
+{"question":"9. Which is/are not correct escaped characters? (A)\\n for new line (B)\\t for new tab (C) % for % (D)\\for\\ (E)\\s for string",
 "answers":{
             "a":"A and B.",
             "b":"C and D.",
-            "c":"Only E.",
-            "d":"Only F."
+            "c":"Only D.",
+            "d":"Only E."
           },
-"correctAnswer":"d"},
+"correctAnswer":"d",
+"explanations": {
+ "a":"",
+ "b":"",
+ "c":"",
+ "d":"In Verilog, there is no specific escaped character sequence '\\s' for representing a string. This option is invalid."},
+"difficulty": "beginner"},
 
 {"question":"10. Which is/are showing incorrect result for given operands and operator ?  (i) 1 > 0 -> 1 'b1 x 1 <= 0 -> x 10 < z -> x  (ii) 4'b 1z0x == 4'b 1z0x -> x 4'b 1z0x != 4'b 1z0x -> x  (iii) One multi-bit operand -> One single-bit result a = 4'b1001; c = |a; // c = 1|0|0|1 = 1  (iv) 4'b 1z0x === 4'b 1z0x -> 1 4'b 1z0x !== 4'b 1z0x -> 0",
 "answers":{
@@ -87,5 +146,12 @@
             "c":"All of these",
             "d":"None"
           },
- "correctAnswer":"d"}
+ "correctAnswer":"d",
+ "explanations": {
+  "a":"",
+  "b":"",
+  "c":"",
+  "d":""},
+"difficulty": "advanced"}
 ]
+}
