@@ -1,0 +1,103 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1.  Verilog is a subset of ___",
+      "answers": {
+        "a": "System VHDL",
+        "b": "VHDL",
+        "c": "System Verilog",
+        "d": "Both A and C"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Verilog and VHDL are two separate hardware description languages (HDLs) used in digital circuit design. Verilog was developed by Gateway Design Automation and later acquired by Cadence Design Systems, while VHDL (VHSIC Hardware Description Language) was developed by the United States Department of Defense. Verilog and VHDL have different syntax, semantics, and features, although they serve similar purposes in describing digital circuits.",
+        "b": "Incorrect. VHDL stands for VHSIC Hardware Description Language, where VHSIC stands for Very High-Speed Integrated Circuit.",
+        "c": "Correct. SystemVerilog is an extension of the Verilog HDL that adds features to support verification and design. It enhances the capabilities of Verilog by incorporating object-oriented programming concepts, constrained randomization for testbench development, and other verification-specific constructs.",
+        "d": "Incorrect. One of them is incorrect."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. Transistor level descriptions can be provided in Verilog",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Verilog supports transistor-level descriptions, allowing designers to model circuits at the device level.",
+        "b": "Incorrect. Verilog does support transistor-level descriptions."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. #time is the operator used for providing delay in Verilog. How is it realized physically?",
+      "answers": {
+        "a": "Inverter",
+        "b": "Buffer",
+        "c": "Flipflop",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. An inverter is a basic logic gate that inverts the input signal. It does not provide a specific delay in Verilog.",
+        "b": "Correct. In Verilog, the #time operator is used to provide a delay in the simulation. It specifies a specific amount of time that the simulation should pause before executing the next line of code. This delay is often implemented using a buffer element, which is designed to introduce a specific delay in the signal path. Buffers are commonly used to control the timing and delay in digital circuits.",
+        "c": "Incorrect. A flip-flop is a sequential logic element used for storing binary data. It is not directly associated with providing a delay in Verilog.",
+        "d": "Incorrect. One of the above is correct."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": " 4. Verilog is a  ____",
+      "answers": {
+        "a": "Behavioral language",
+        "b": "Structural language",
+        "c": "Both",
+        "d": "None"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Verilog is not solely a behavioral language. While it does support behavioral modeling, which allows designers to describe the intended functionality of a digital circuit, Verilog also provides features for other kinds of modelling.",
+        "b": "Incorrect. Verilog is not solely a structural language either. Structural modeling in Verilog involves describing the interconnections and hierarchy of modules in a circuit. While Verilog does support structural modeling, it also supports other kinds of modelling.",
+        "c": "Correct. Verilog is a hardware description language (HDL) that supports both behavioral and structural modeling. This means that designers can use Verilog to describe the behavior of digital circuits as well as their structure and interconnections.",
+        "d": "Incorrect. One or both of them are correct."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. The highest and lowest level of abstraction provided in Verilog are ____",
+      "answers": {
+        "a": "Dataflow and gate level",
+        "b": "Behavioral and gate level",
+        "c": "Behavioral and switch level",
+        "d": "Dataflow and switch level"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. While dataflow is indeed one of the abstraction levels in Verilog, the other level mentioned here, gate level, is not the lowest level of abstraction. Gate level represents the behavior of the circuit in terms of logic gates.",
+        "b": "Incorrect. Behavioral is one of the abstraction levels in Verilog, but gate level, as mentioned earlier, is not the lowest level of abstraction.",
+        "c": "Correct. Behavioral is an abstraction level in Verilog that describes the circuit's behavior using procedural constructs and control flow statements. Switch level is the lowest level of abstraction, where the circuit is described using transistor switches or transmission gates.",
+        "d": "Incorrect. Dataflow is not the highest abstraction level."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "6. Verilog supports ____",
+      "answers": {
+        "a": "4 values and 8 strengths",
+        "b": "8 values and 4 strengths",
+        "c": "2 values and 4 strengths",
+        "d": "2 values and 8 strengths"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Verilog supports four values: 0, 1, X, and Z, and eight strengths for modeling signal drivers.",
+        "b": "Incorrect. Verilog does not support eight values.",
+        "c": "Incorrect. Verilog does not support only two values.",
+        "d": "Incorrect. Verilog does not support only two values."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

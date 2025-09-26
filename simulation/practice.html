@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual labs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/js/jsplumb.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="columns mt-2 is-variable is-1 is-centered is-flex is-flex-wrap-wrap">
+        <div class="v-tabs">
+            <ul>
+                <li class="is-active">
+                    <a>
+                        <span>OR LOGIC</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>NOR LOGIC</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>NAND LOGIC</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>AND LOGIC</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column">
+            <div class="v-collapsible-instruction-container v-instruction-container">
+                <div class="v-collapsible is-size-5" id="task-description">
+                    Instructions
+                </div>
+                <div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+                        <ul style="list-style: disc;">
+                            <li>
+                                The Verilog module and testbench code are divided into colored code blocks for clarity.
+                            </li>
+                            <li>
+                                Drag and drop the code blocks to arrange them in the correct order for the code to work.
+                            </li>
+                            <li>
+                                Complete the partially filled code blocks by entering the required values in the input fields.
+                            </li>
+                            <li>
+                                Click on <b>Validate</b> after arranging and completing the code blocks. If the code is correct, you will see the output truth table and a success/failure message.
+                            </li>
+                            <li>
+                                Click on <b>Reset</b> to clear the workspace and start over.
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns is-variable is-1 is-centered is-flex is-flex-wrap-wrap my-0">
+        <div id="start" class="column is-1-desktop is-2-tablet is-3-mobile center-content">
+            <button class="v-button" onclick="ValidateCode()">Validate</button>
+        </div>
+        <div id="restart" class="column is-1-desktop is-2-tablet is-3-mobile center-content">
+            <button class="v-button" onclick="location.reload()">Reset</button>
+        </div>
+    </div>
+    <div class="columns is-variable is-3 is-centered is-flex is-flex-wrap-wrap">
+        <div class="column is-3-desktop is-7-tablet is-11-mobile center-content">
+            <div class="v-datalist-container">
+                <div class="v-datalist-title">
+                    Verilog Module
+                </div>
+                <div id="container">
+                    <ul class="drag-sort-enable custom-list" id="module">
+                            <li id="1" style="background-color: #e3f2fd">
+                                <span class="comment">// Define module name, inputs and outputs </span>
+                                <p>module <input type="text" id="module-name" placeholder="Enter a module name"> ( </p>
+                                <p>&nbsp;&nbsp;<label>input</label>
+                                    <select id="input1-selector">
+                                        <option value="" disabled selected>Select an input</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select> ,
+                                </p>
+                                <p id="second-input-module">&nbsp;&nbsp;input
+                                    <select id="input2-selector">
+                                        <option value="" disabled selected>Select an input</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select> ,
+                                </p>
+                                <p>&nbsp;&nbsp;output
+                                    <select id="output-selector">
+                                        <option value="" disabled selected>Select an output</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select>
+                                </p>
+                                <p>);</p>
+                            </li>
+                            <li id="2" style="background-color: #fff3e0">
+                                <span class="comment">&nbsp;// Define the functionality of this module.</span>
+                                <p>
+                                    &nbsp; assign&nbsp;
+                                    <select id="LHS-selector">
+                                        <option value="" disabled selected>Select LHS</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select>
+                                    &nbsp;
+                                    <select id="operator-selector">
+                                        <option value="" disabled selected>Select Operator</option>
+                                        <option value="=">=</option>
+                                        <option value="<=">
+                                            <= </option>
+                                    </select>
+                                    &nbsp;
+                                    <input type="text" id="logic-expression" placeholder="Enter the logic expression"> 
+                                    &nbsp;
+                                    ;
+                                </p>
+                            </li>
+                            <li id="3" style="background-color: #fce4ec"><span class="comment">// End of the module</span><br>endmodule</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column is-3-desktop is-7-tablet is-11-mobile center-content">
+            <div class="v-datalist-container">
+                <div class="v-datalist-title">
+                    Verilog Testbench
+                </div>
+                <div id="containerTB">
+                    <ul class="drag-sort-enable custom-list" id="tb">
+                            <li id="1TB" style="background-color: #e3f2fd">
+                                <span class="comment">// Define Test Bench name</span>
+                                <p>
+                                    module <input type="text" id="tb-name" placeholder="Enter a test bench name"> ;
+                                </p>
+                            </li>
+                            <li id="2TB" style="background-color: #fff3e0">
+                                <p class="comment">
+                                    // Declare the input and output variables
+                                </p>
+                                <p>&nbsp;&nbsp;reg
+                                    <select id="input1TB-selector">
+                                        <option value="" disabled selected>Select an input/output</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select> ;
+                                </p>
+                                <p>&nbsp;&nbsp;reg
+                                    <select id="input2TB-selector">
+                                        <option value="" disabled selected>Select an input/output</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select> ;
+                                </p>
+                                <p>&nbsp;&nbsp;wire
+                                    <select id="input3TB-selector">
+                                        <option value="" disabled selected>Select an input/output</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select> ;
+                                </p>
+                            </li>
+                            <li id="3TB" style="background-color: #e8f5e9">
+                                &nbsp;&nbsp;<span class="comment">// Instantiate the gate module</span>
+                                <p>
+                                    &nbsp;&nbsp;<input type="text" id="module-name-tb"
+                                        placeholder="Enter the logic gate module name "> uut
+                                    (<br>
+                                </p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <select id="argument1-selector">
+                                        <option value="" disabled selected>Select an Argument</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select> ,
+                                </p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <select id="argument2-selector">
+                                        <option value="" disabled selected>Select an Argument</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select> ,
+                                </p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <select id="argument3-selector">
+                                        <option value="" disabled selected>Select an Argument</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="Y">Y</option>
+                                    </select> ) ;
+                                </p>
+                            </li>
+                            <li id="4TB" style="background-color: #fce4ec">
+                                <span class="comment">// Initial Block</span>
+                                <p>
+                                    &nbsp;&nbsp;initial begin
+                                </p>
+                                <span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Defining the input waves A, B</span>
+                                <p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;A = 0;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;B = 0;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;#1<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;A = 0;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;B = 1;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;#1<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;A = 1;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;B = 0;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;#1<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;A = 1;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;B = 1;<br>
+                                </p>
+                                <p><br>&nbsp;&nbsp;&nbsp;&nbsp;$finish; <br>&nbsp;&nbsp;end</p>
+                            </li>
+                            <li id="5TB" style="background-color: #fffde7"><span class="comment">// End of the module</span><br>endmodule</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column is-3-desktop is-7-tablet is-11-mobile center-content">
+            <div class="v-datalist-container">
+                <div class="v-datalist-title">
+                    Observations
+                </div>
+                <div class="v-datalist-row">
+                    <div id="result"></div>
+                    <div class="v-table-wrap">
+                        <table class="table is-bordered is-fullwidth">
+                            <thead id="table-head">
+                            </thead>
+                            <tbody id="table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const currentTab = { OR: 0, NOR: 1, NAND: 2, AND:3 }
+            let selectedTab = currentTab.OR;
+            const tabs = document.querySelectorAll('.v-tabs li');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(item => item.classList.remove('is-active'));
+                    tab.classList.add('is-active');
+                    let parent = tab.parentNode;
+                    selectedTab = Array.prototype.indexOf.call(parent.children, tab);
+                })
+            })
+        </script>
+        <script src="./js/main.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+
+</html>

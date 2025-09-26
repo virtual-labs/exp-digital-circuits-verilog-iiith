@@ -1,0 +1,184 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which is correct assignment for two input and gate shown in Fig.1? <br> <img src='images/image003.gif' width='150px'> ",
+      "answers": {
+        "a": "Wire Y; assign Y = A x B ;",
+        "b": "Wire Y; assign Y = A & B ;",
+        "c": "Wire Y; assign Y = A and B ;",
+        "d": "Wire Y; assign A & B = Y ;"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This option is incorrect because the symbol 'x' typically represents multiplication.",
+        "b": "Correct. It represents the logical AND operation between inputs A and B.",
+        "c": "Incorrect. This option is incorrect because it uses the word 'and' instead of the appropriate symbol '&' to represent the logical AND operation.",
+        "d": "Incorrect. The correct syntax is to assign the result of the operation to the variable on the left-hand side of the equation."
+      },
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "2. Which is correct assignment for tri state buffer shown in Fig.2 ? <br> <img src='images/image005.gif' width='150px'> ",
+      "answers": {
+        "a": " Tri Y ; assign Y = (ENB) : A : Z ;",
+        "b": "Y = (ENB) ? A : Z ;",
+        "c": " Tri Y ; assign Y = (ENB) ? A : Z ;",
+        "d": "Tri Y ; Y = (ENB) ? A : Z ;"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The syntax is wrong and uses colons instead of the ternary operator.",
+        "b": "Incorrect. The 'Tri' keyword is missing before the declaration of variable Y.",
+        "c": "Incorrect. The syntax is correct but the 'Tri' keyword is unnecessary before the assign statement.",
+        "d": "Correct. This option properly combines the tristate declaration using the 'Tri' keyword and assigns the value to Y using the ternary operator."
+      },
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "3. Which is not a logical operator?",
+      "answers": {
+        "a": "| logical OR",
+        "b": "|| logical OR",
+        "c": "&& logical AND",
+        "d": "! logical NOT"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Incorrect. '|' symbol represents the bitwise OR operator, not the logical OR operator.",
+        "b": "Correct. The '||' symbol represents the logical OR operator.",
+        "c": "Correct. The '&&' symbol represents the logical AND operator.",
+        "d": "Correct. The '!' symbol represents the logical NOT operator."
+      },
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "4. Which is/are bitwise operator(s) ? <br>  (A)  &  <br> (B)  ~  <br> (C)  |  <br> (D)  ^ ",
+      "answers": {
+        "a": "Only A.",
+        "b": "A and B.",
+        "c": "A, B and C.",
+        "d": "All Of These."
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Correct. '&' is a bitwise AND operator.",
+        "b": "Correct. '&' is bitwise AND, '~' is bitwise NOT.",
+        "c": "Correct. '&' is bitwise AND, '~' is bitwise NOT, '|' is bitwise OR.",
+        "d": "Correct. All listed operators are bitwise operators in Verilog."
+      },
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "5. Which is not a correct statement?  <br> (A)  >> is a shift right operator.  <br> (B)  & is a reduction operator  <br> (C)  === is a case equality operator  <br> (D) Y = (sel) ? A : B; is an example of conditional operator",
+      "answers": {
+        "a": "A",
+        "b": "B",
+        "c": "All Of These.",
+        "d": "A, B and C."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Correct. '>>' is a right shift operator in Verilog.",
+        "b": "Incorrect. '&' is a bitwise AND operator, not a reduction operator.",
+        "c": "Incorrect. At least one among these is correct.",
+        "d": "Incorrect. A and C are correct statements."
+      },
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "6. Which is/are correct verilog code for Fig.3? <br> <img src='images/Exp9-Q6.jpg'>",
+      "answers": {
+        "a": "Only A.",
+        "b": "Only B.",
+        "c": "C and D.",
+        "d": "A and B."
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The code options do not match the required Verilog implementation for the given figure.",
+        "b": "Incorrect. The code options do not match the required Verilog implementation for the given figure.",
+        "c": "Incorrect. The code options do not match the required Verilog implementation for the given figure.",
+        "d": "Correct. The code options match the required Verilog implementation for the given figure."
+      },
+      "difficulty": "advanced"
+    },
+
+    {
+      "question": "7. Which is correct verilog code for Fig.4? <br> <img src='images/image009.gif' width='200px'> <img src='images/Exp9-Q7.jpg'> ",
+      "answers": {
+        "a": "Only A.",
+        "b": "Only B.",
+        "c": "Only C.",
+        "d": "A and D."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The code does not match the required Verilog implementation for the given figure.",
+        "b": "Incorrect. The code does not match the required Verilog implementation for the given figure.",
+        "c": "Correct. The code matches the required Verilog implementation for the given figure.",
+        "d": "Incorrect. The code does not match the required Verilog implementation for the given figure."
+      },
+      "difficulty": "advanced"
+    },
+
+    {
+      "question": "8. Which is not a correct port assignment for a module? <br> <img src='images/Exp9-Q8.jpg'>",
+      "answers": {
+        "a": "(i)",
+        "b": "(ii)",
+        "c": "(iii)",
+        "d": "(iv)"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The port assignment does not follow Verilog syntax or conventions.",
+        "b": "Incorrect. The port assignment does not follow Verilog syntax or conventions.",
+        "c": "Incorrect. The port assignment does not follow Verilog syntax or conventions.",
+        "d": "Correct. The port assignment follows Verilog syntax and conventions."
+      },
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "9. Which is/are not correct escaped characters? <br> (A)  \\n for new line <br> (B)  \\t for new tab <br> (C)  % for % <br> (D)  \\ for \\ <br> (E)  \\s for string",
+      "answers": {
+        "a": "A and B.",
+        "b": "C and D.",
+        "c": "Only D.",
+        "d": "Only E."
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Both are valid escaped characters in Verilog.",
+        "b": "Incorrect. Both are valid escaped characters in Verilog.",
+        "c": "Incorrect. The escape character listed is valid in Verilog.",
+        "d": "Correct. In Verilog, there is no specific escaped character sequence '\\s' for representing a string. This option is invalid."
+      },
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "10. Which is/are showing incorrect result for given operands and operator ? <br> (i)  1 > 0 -> 1 <br> 'b1 x 1 <= 0 -> x <br> 10 < z -> x  <br> (ii)  4'b 1z0x == 4'b 1z0x -> x <br>   4'b 1z0x != 4'b 1z0x -> x  <br> (iii)  One multi-bit operand -> One single-bit result <br>  a = 4'b1001; <br>  c = |a; // c = 1|0|0|1 = 1  <br> (iv)  4'b 1z0x === 4'b 1z0x -> 1 <br>   4'b 1z0x !== 4'b 1z0x -> 0",
+      "answers": {
+        "a": "(i), (ii) and (iii).",
+        "b": "Only (i).",
+        "c": "All of these",
+        "d": "None"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The results shown match the expected behavior for the given operands and operators.",
+        "b": "Incorrect. The results shown match the expected behavior for the given operands and operators.",
+        "c": "Incorrect. The results shown match the expected behavior for the given operands and operators.",
+        "d": "Correct. The results shown match the expected behavior for the given operands and operators."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
