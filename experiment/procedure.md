@@ -1,31 +1,40 @@
-# Design of Digital Circuits Using Verilog
+### Steps to Complete the Code
 
-## Modules Required -
+1. **Arrange the Code Blocks:**
 
-- Verilog Module
-- Verilog Test bench
+   - Place the code block that defines the Verilog module name, inputs, and outputs first.
+   - Next, add the code block that defines the module functionality (the assign block).
+   - Finally, add the code block that ends the module.
 
-## Code -
+2. **Drag and Drop:**
 
-### Verilog Module -  
+   - Drag and drop the code blocks to arrange them in the order mentioned above for both the Verilog module and the testbench.
 
-- The code block that defines inputs, outputs, module name should be placed first, followed by the code block that defines the module functionality and then finally the end of module block.
-- Drag and drop the code blocks to arrange them in the order mentioned above.
-- Now enter a name for the verilog module. Make sure that the name begins with alphabets and can only include alphanumeric characters and '_' character without any spaces or other special characters in between.
-- Select the inputs as A, B and the output as Y.
-- Now, to define the functionality of the module, the assign block has to be filled. The Y input has to be assigned the value of (A&B), (A|B), ~(A|B), ~(A&B) for AND, OR, NOR, NAND Logic respectively using the blocking assignment operator (=).
-- Fill in the LHS and RHS of the assignment accordingly keeping in mind what value should be assigned to whom.
+3. **Complete the Code Blocks:**
 
-### Verilog Test Bench -
+   - For the Verilog module:
 
-- The code block that defines test bench name should be placed first, followed by the code block that declares input, output registers and wires, then the block that instantiates the Logic gate module, then the initial block that defines the input A, B waves and finally the end of module block.
-- Drag and drop the code blocks to arrange them in the order mentioned above.
-- Now enter a name for the verilog test bench. Make sure that the name begins with alphabets and can only include alphanumeric characters and '_' character without any spaces or other special characters in between and it does not match with the verilog module name you have entered earlier.
-- Then declare A and B as registers and Y as a wire. (*Y is the output here*).
-- Now instantiate the gate module by entering the name of the verilog module you have earlier coded. Select the arguments in the same order as you have chosen in the logic gate module. The order in which you give the arguments here, the inputs and outputs will be used in the same order in the module. For example, you give arguments in the module instantiation in the test bench in the order A, Y, B, then the inputs of the module will become A, Y and the output will become B which is not desired.
+     - Enter a name for the module. The name should begin with an alphabet and can include alphanumeric characters and underscores (`_`). No spaces or special characters allowed.
+     - Select the inputs as `A` and `B`, and the output as `Y`.
+     - In the assign block, assign `Y` the value of the required logic expression:
+       - For AND logic: `Y = A & B;`
+       - For OR logic: `Y = A | B;`
+       - For NOR logic: `Y = ~(A | B);`
+       - For NAND logic: `Y = ~(A & B);`
+     - Use the blocking assignment operator (`=`) for combinational logic.
 
-## Observations -
+   - For the Verilog testbench:
+     - Enter a name for the testbench. The name should begin with an alphabet, include only alphanumeric characters and underscores, and must not match the module name.
+     - Declare `A` and `B` as registers, and `Y` as a wire.
+     - Instantiate the logic gate module by entering its name and selecting the arguments in the same order as in the module definition.
+     - Define the input `A` and `B` waveforms in the initial block.
 
-- On clicking "validate" option after completing the code (assuming everything is filled correctly) you should see a "Success" message and a truth table under the observations section.
-- Observe the input wave and the corresponding expected and observed output Y.
+**Note:**
 
+- While naming modules, testbenches, variables, and instance names, ensure they begin with an alphabet or underscore and only contain alphanumeric characters and underscores.
+- Do not use the same name for any two variables in the same module or testbench.
+
+### Observations
+
+- After clicking the **Validate** button (assuming all code blocks are filled correctly), you should see a "Success" message and a truth table under the Observations section.
+- Observe the input wave and the corresponding expected and observed output `Y`.
